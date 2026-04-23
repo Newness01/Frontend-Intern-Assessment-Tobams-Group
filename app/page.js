@@ -1,65 +1,83 @@
-import Image from "next/image";
+import React from 'react'
+import Navbar from './Components/Navbar'
+import Hero from './Components/Hero'
+import LearningSystem from './Components/LearningSystem'
+import TrainingSection from './Components/TrainingSection'
+import ManagementDevelopment from './Components/ManagementDevelopment'
+import TransformationHub from './Components/TransformationHub'
+import ConsultantTraining from './Components/ConsultantTraining'
+import CTA from './Components/CTA'
+import Testimonials from './Components/Testimonial'
+import Footer from './Components/Footer'
 
-export default function Home() {
+const page = () => {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div>
+      <Navbar/>
+      <Hero/>
+      <LearningSystem/>
+      
+
+      <TrainingSection
+      title="Corporate Trainings"
+        description="Empower your team with our customised Corporate 
+        Training programs designed to address the unique needs 
+        and objectives of your organisation. Our expert facilitators 
+        work closely with your team to deliver tailored 
+        learning experiences that align with your company's goals and values."
+        image="/image2.jpg"
+        reverse
+        points={[
+          "Leadership Development",
+          "Strategic Planning and Implementation",
+          "Project Management",
+          "Sustainability Training",
+          "Customised Training",
+        ]}
+      />
+<TrainingSection
+title="Personalised Individual Training"
+        description="Begin a journey of lifelong learning and professional 
+        development with Tobams Group's diverse range of training programs for individuals. 
+        From technical skills mastery to soft skills enhancement, our courses cover 
+        a wide spectrum of topics to meet the evolving needs of today's professionals.  "
+        image="/image3.jpg"
+        points={[
+          "Leadership Development",
+          "Soft Skills Development",
+          "Industry Specific Knowledge",
+          "Technical Skills Enhancement",
+          "Time Management and Productivity",
+          "Career Development",
+        ]}
+      />
+
+      <TrainingSection
+      title="Capacity Development"
+        description="At Tobams Group, we empower individuals and organizations 
+        through tailored training programs, expert-led workshops, and personalized mentorship.
+         We are committed to your success and growth. We are dedicated to providing a 
+        comprehensive suite of benefits designed to foster your development and success:"
+        image="/image4.jpg"
+        reverse
+        points={[
+          "Tailored Training Programs",
+          "Expert-Led Workshops",
+          "Personalized Mentorship",
+          "Technical Skills Enhancement",
+          "Collaborative Learning Environment",
+          "Ongoing Support and Resources",
+        ]}
+      />
+
+      <ManagementDevelopment/>
+      <TransformationHub/>
+      <ConsultantTraining/>
+      <CTA/>
+      <Testimonials/>
+      <Footer/>
     </div>
-  );
+  )
 }
+
+export default page
