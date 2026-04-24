@@ -11,7 +11,7 @@ export const metadata = {
   title: "Tobams Group | Training & Development",
   description: "Transforming careers through expert-led training, talent development, and professional growth programs.",
   icons: {
-    icon: "/Tobams.png",
+    icon: "/tobam.png",
   },
 };
 
